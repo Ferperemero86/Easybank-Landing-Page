@@ -21,6 +21,14 @@
 }
 
 .fade-out {
+  animation: fade-out 2000ms ease-in-out forwards;
+}
+
+.men-el-fade-in {
+  animation: fade-in 1000ms ease-in-out forwards;
+}
+
+.men-el-fade-out {
   animation: fade-out 300ms ease-in-out forwards;
 }
 
@@ -47,6 +55,11 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+.container-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -61,6 +74,10 @@ a, a:visited, a:hover {
 
 .flex-ai-c {
   align-items: center;
+}
+
+.flex-fd-col {
+  flex-direction: column;
 }
 
 button, .button {
@@ -88,15 +105,28 @@ button, .button {
   font-size: 0.875rem;
 }
 
-.header.open .header-menu > span:first-child {
+.header-toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #2d314d;
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+
+.header-toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header-toggle.open > span:first-child {
   transform: rotate(45deg);
 }
 
-.header.open .header-menu > span:nth-child(2) {
+.header-toggle.open > span:nth-child(2) {
   opacity: 0;
 }
 
-.header.open .header-menu > span:last-child {
+.header-toggle.open > span:last-child {
   transform: rotate(-45deg);
 }
 
@@ -111,25 +141,13 @@ button, .button {
 }
 
 .header nav {
-  padding: 1.0625rem 1.5rem;
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
 }
 
 .header-logo img {
   width: 8.8125rem;
   height: 1.375rem;
-}
-
-.header-menu > span {
-  display: block;
-  width: 26px;
-  height: 2px;
-  background-color: #2d314d;
-  transition: all 300ms ease-in-out;
-  transform-origin: 3px 1px;
-}
-
-.header-menu > span:not(:last-child) {
-  margin-bottom: 5px;
 }
 
 .header-links a {
@@ -172,6 +190,26 @@ button, .button {
 
 .header-cta:hover {
   opacity: 0.75;
+}
+
+.header-menu {
+  opacity: 0;
+  margin-top: 1.5rem;
+  background-color: white;
+  padding: 1.625rem;
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.header-menu a {
+  display: block;
+  color: #2d314d;
+  padding: 0.625rem;
+  text-align: center;
+  opacity: 0;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

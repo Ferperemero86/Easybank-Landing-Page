@@ -1,5 +1,5 @@
 
-// Fade In Fade Out
+//// Fade In Fade Out ////
 @keyframes fade-in {
     from {
         opacity: 0;     
@@ -20,12 +20,22 @@
     }
 }
 
+// Overlay and Menu block
 .fade-in {
-    animation: fade-in 300ms ease-in-out forwards;
+    @include fade-in(300ms);
 }
 
 .fade-out {
-    animation: fade-out 300ms ease-in-out forwards;
+    @include fade-out(2000ms);
+}
+
+// Menu Elements 
+.men-el-fade-in {
+    @include fade-in(1000ms);
+}
+
+.men-el-fade-out {
+    @include fade-out(300ms);
 }
 
 

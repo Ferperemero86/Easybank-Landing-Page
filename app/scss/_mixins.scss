@@ -24,3 +24,13 @@ $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.43
 @mixin border-radius($r) {
     border-radius: $r;
 }
+
+//Animations
+
+@mixin fade-in($time) {
+    animation: fade-in $time ease-in-out forwards;
+}
+
+@mixin fade-out($time) {
+    animation: fade-out $time ease-in-out forwards;
+}
