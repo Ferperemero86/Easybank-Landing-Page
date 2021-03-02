@@ -1,12 +1,18 @@
 
 //Hamburger animation
 const btnHamburger = document.querySelector("#btn-hamburger");
+const header = document.querySelector(".header");
+const overlay = document.querySelector(".overlay");
 
 btnHamburger.addEventListener("click", function() {
-    if (btnHamburger.classList.contains("open")) {
-        btnHamburger.classList.remove("open");
+    if (header.classList.contains("open")) {
+        header.classList.remove("open");
+        overlay.classList.add("fade-out");
+        overlay.classList.remove("fade-in");
     } 
     else {
-        btnHamburger.classList.add("open");
+        header.classList.add("open");
+        overlay.classList.add("fade-in");
+        overlay.classList.remove("fade-out");
     }
 }) 
