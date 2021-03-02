@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -11,18 +13,42 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
 
-<!---
-  Home
-  About
-  Contact
-  Blog
-  Careers
+<body>
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header-logo">
+        <img src="images/logo.svg" alt="Easybank" />
+      </a>
+      <a href="#" class="header-menu hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="header-links hide-for-mobile">
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">About</a>
+        <a href="#" class="link">Contact</a>
+        <a href="#" class="link">Blog</a>
+        <a href="#" class="link">Careers</a>
+      </div>
+
+      <a class="button header-cta hide-for-mobile" href="#">Request Invite</a>
+    </nav>
+  </header>
+
+  <!---
 
   Request Invite
 
@@ -102,4 +128,5 @@
 -->
   <script src="/app/js/script.js"></script>
 </body>
+
 </html>
