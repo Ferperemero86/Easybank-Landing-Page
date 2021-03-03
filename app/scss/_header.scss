@@ -1,5 +1,7 @@
 .header {
     font-size: $font-sm;
+    position: relative;
+    z-index: 9999;
 
     &-toggle {
         > span {
@@ -109,6 +111,7 @@
         left: 50%;
         transform: translateX(-50%);
         @include border-radius(5px);
+        
 
         a {
             display: block;

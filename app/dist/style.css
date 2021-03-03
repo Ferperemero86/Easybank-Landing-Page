@@ -103,6 +103,8 @@ button, .button {
 
 .header {
   font-size: 0.875rem;
+  position: relative;
+  z-index: 9999;
 }
 
 .header-toggle > span {
