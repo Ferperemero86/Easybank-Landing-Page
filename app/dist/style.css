@@ -4,15 +4,18 @@
   }
   to {
     opacity: 1;
+    visibility: visible;
   }
 }
 
 @keyframes fade-out {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -51,13 +54,56 @@ body {
   font-weight: 300;
 }
 
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  margin-top: 0;
+}
+
 .container-padding {
-  padding-left: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container-padding--pall {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
   padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container-padding--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.container-padding--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container-padding--pt {
+  padding-top: 2.25rem;
+}
+
+.container-padding--pr {
+  padding-right: 1.5rem;
+}
+
+.container-padding--pb {
+  padding-bottom: 2.25rem;
+}
+
+.container-padding--pl {
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -87,6 +133,13 @@ button, .button {
   border: 0;
   color: white;
   border-radius: 50px;
+  display: inline-block;
+  font-size: 0.875rem;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover, .button:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 63.9375em) {
@@ -184,18 +237,9 @@ button, .button {
   opacity: 1;
 }
 
-.header-cta {
-  font-size: 0.875rem;
-  color: white;
-  transition: opacity 300ms ease-in-out;
-}
-
-.header-cta:hover {
-  opacity: 0.75;
-}
-
 .header-menu {
   opacity: 0;
+  visibility: hidden;
   margin-top: 1.5rem;
   background-color: white;
   padding: 1.625rem;
@@ -553,6 +597,17 @@ template {
   display: none;
 }
 
+.hero {
+  background-color: #fafafa;
+}
+
+@media (min-width: 64em) {
+  .hero .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .hero-image {
   position: relative;
   background: url("../../images/bg-intro-mobile.svg") no-repeat center center;
@@ -560,12 +615,98 @@ template {
   min-height: 17.5rem;
 }
 
-.hero-image::before {
+@media (min-width: 40em) {
+  .hero-image {
+    min-height: 25rem;
+    background-position: center 60%;
+    background-image: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero-image {
+    flex: 3;
+    order: 2;
+    min-height: 41rem;
+  }
+}
+
+.hero-image::after {
   content: "";
   height: 100%;
   width: 100%;
   position: absolute;
   background: url("../../images/image-mockups.png") no-repeat center bottom;
+  background-size: 70%;
+}
+
+@media (min-width: 40em) {
+  .hero-image::after {
+    background-size: 60%;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero-image::after {
+    width: 120%;
+    height: 122%;
+    background-size: 94%;
+    background-position: center 150%;
+    left: 22%;
+  }
+}
+
+.hero-image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url("../../images/bg-intro-desktop.svg") no-repeat center bottom;
   background-size: 93%;
+}
+
+@media (max-width: 39.9375em) {
+  .hero-image::before {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero-image::before {
+    width: 150%;
+    background-size: 122%;
+    background-position: 0 83%;
+  }
+}
+
+.hero-text {
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .hero-text {
+    flex: 2;
+    order: 1;
+    text-align: left;
+  }
+}
+
+.hero-text h1 {
+  font-weight: 300;
+  font-size: 2.31rem;
+  color: #2d314d;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero-text h1 {
+    font-size: 3.25rem;
+  }
+}
+
+.hero-text p {
+  line-height: 1.5rem;
+  margin-bottom: 2.25rem;
 }
 /*# sourceMappingURL=style.css.map */

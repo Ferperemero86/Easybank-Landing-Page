@@ -91,18 +91,9 @@
        
     }
 
-    &-cta {
-        font-size: $font-sm;
-        color: $white;
-        transition: opacity 300ms ease-in-out;
-
-        &:hover {
-            opacity: 0.75;
-        }
-    }
-
     &-menu {
         opacity: 0;
+        visibility: hidden;
         margin-top: 1.5rem;
         background-color: $white;
         padding: 1.625rem;
