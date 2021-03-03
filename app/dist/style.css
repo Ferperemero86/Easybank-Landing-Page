@@ -550,4 +550,20 @@ template {
 [hidden] {
   display: none;
 }
+
+.hero-image {
+  position: relative;
+  background: url("../../images/bg-intro-mobile.svg") no-repeat center center;
+  background-size: cover;
+  min-height: 17.5rem;
+}
+
+.hero-image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url("../../images/image-mockups.png") no-repeat center bottom;
+  background-size: 93%;
+}
 /*# sourceMappingURL=style.css.map */
