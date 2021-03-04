@@ -868,7 +868,7 @@ template {
 
 .article-image {
   height: 12.5rem;
-  background: url("/images/image-currency.jpg") no-repeat center center;
+  background: no-repeat center center;
   background-size: cover;
 }
 
@@ -898,5 +898,48 @@ template {
 
 .article-description {
   font-size: 0.8125rem;
+}
+
+.footer {
+  background-color: #2d314d;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  display: inline-block;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 1.875rem;
+}
+
+.footer-social {
+  margin-bottom: 1.875rem;
+}
+
+.footer-social a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links a {
+  line-height: 2.25;
+}
+
+.footer-links.col2 {
+  margin-bottom: 1.875rem;
+}
+
+.footer-cta a.button {
+  margin-bottom: 1.875rem;
 }
 /*# sourceMappingURL=style.css.map */

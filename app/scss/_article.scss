@@ -36,7 +36,7 @@
 
     &-image {
         height: 12.5rem;
-        background: url("/images/image-currency.jpg") no-repeat center center;
+        background: no-repeat center center;
         background-size: cover;
     }
 
@@ -47,10 +47,6 @@
 
         @include breakpoint-up(medium) {
             padding: 1.875rem  1.5625rem;
-        }
-
-        @include breakpoint-up(large) {
-            
         }
     }
 

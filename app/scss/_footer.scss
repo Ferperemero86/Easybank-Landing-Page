@@ -1,0 +1,53 @@
+.footer {
+    background-color: $darkBlue;
+    color: $white;
+    padding: 2.5rem;
+    text-align: center;
+
+    a {
+        color: $white;
+        display: inline-block;
+    }
+
+    &-logo {
+        display: inline-block;
+        margin-bottom: 1.875rem;
+    }
+
+    &-social {
+        margin-bottom: 1.875rem;
+
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+            line-height: 2.25;
+        }
+
+        &.col1 {
+
+        }
+
+        &.col2 {
+            margin-bottom: 1.875rem;
+        }
+    }
+
+    &-cta {
+
+        a.button {
+            margin-bottom: 1.875rem;
+        }
+    }
+
+    &-copyright {
+
+    }
+}
