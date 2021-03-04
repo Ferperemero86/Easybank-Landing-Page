@@ -1,0 +1,72 @@
+.articles {
+    background-color: $veryLightGray;
+}
+
+.article {
+
+    &-content {
+
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &-item {
+        @include border-radius(0.3125rem);
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.15px);
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &-image {
+        height: 12.5rem;
+        background: url("/images/image-currency.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &-text {
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+        color: $grayishBlue;
+        height: 100%;
+
+        @include breakpoint-up(medium) {
+            padding: 1.875rem  1.5625rem;
+        }
+
+        @include breakpoint-up(large) {
+            
+        }
+    }
+
+    &-author {
+        font-size: 0.625rem;
+        margin-bottom: .75rem;
+    }
+
+    &-title {
+        font-size: 1.0625rem;
+        color: $darkBlue;
+        margin-bottom: .5rem;
+        line-height: 1.2;
+    }
+
+    &-description {
+        font-size: 0.8125rem;
+    }
+}

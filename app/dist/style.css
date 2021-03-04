@@ -830,4 +830,72 @@ template {
   font-size: 0.875rem;
   line-height: 1.5rem;
 }
+
+.articles {
+  background-color: #fafafa;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+}
+
+@media (min-width: 40em) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .article-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.article-item {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 150ms ease-in-out;
+}
+
+.article-item:hover {
+  transform: scale(1.05);
+}
+
+.article-image {
+  height: 12.5rem;
+  background: url("/images/image-currency.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.article-text {
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  color: #9698a6;
+  height: 100%;
+}
+
+@media (min-width: 40em) {
+  .article-text {
+    padding: 1.875rem  1.5625rem;
+  }
+}
+
+.article-author {
+  font-size: 0.625rem;
+  margin-bottom: .75rem;
+}
+
+.article-title {
+  font-size: 1.0625rem;
+  color: #2d314d;
+  margin-bottom: .5rem;
+  line-height: 1.2;
+}
+
+.article-description {
+  font-size: 0.8125rem;
+}
 /*# sourceMappingURL=style.css.map */
