@@ -14,8 +14,7 @@ body {
     font-family: 'Public Sans', sans-serif;
     font-size: $font-med;
     color: $grayishBlue;
-    font-weight: 300;
-    min-height: 300vh;
+    font-weight: 300; 
     overflow-x: hidden;
 
     @include breakpoint-up(large) {

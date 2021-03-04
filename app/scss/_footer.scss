@@ -4,6 +4,14 @@
     padding: 2.5rem;
     text-align: center;
 
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: 30% auto auto auto;
+        grid-template-areas:
+        "logo links-col1 links-col2 copyright";
+        font-size: 0.8rem;
+    }
+
     a {
         color: $white;
         display: inline-block;
@@ -12,31 +20,45 @@
     &-logo {
         display: inline-block;
         margin-bottom: 1.875rem;
+        justify-self: flex-start;
+        padding-left: 2rem;
+        grid-area: logo;
     }
 
     &-social {
         margin-bottom: 1.875rem;
+        justify-self: flex-start;
+        padding-left: 2rem;
+        grid-area: logo;
 
         a:not(:last-child) {
             margin-right: 1rem;
+        }
+
+        @include breakpoint-up(large) {
+            margin-top: 3.8rem;
         }
     }
 
     &-links {
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         a {
             line-height: 2.25;
         }
 
         &.col1 {
-
+            grid-area: links-col1;
         }
 
         &.col2 {
             margin-bottom: 1.875rem;
+            grid-area: links-col2;
+        }
+
+        @include breakpoint-up(large) {
+            align-items: flex-start;
         }
     }
 
@@ -44,10 +66,24 @@
 
         a.button {
             margin-bottom: 1.875rem;
+
+            @include breakpoint-up(large) {
+                margin-bottom: 0;
+            }
+        }
+
+        @include breakpoint-up(large) {
+            text-align: right;
+            padding-right: 3.5rem;
         }
     }
 
     &-copyright {
+        grid-area: copyright;
 
+        @include breakpoint-up(large) {
+            color: $grayishBlue;
+            justify-self: flex-start;
+        }
     }
 }

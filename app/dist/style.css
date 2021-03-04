@@ -52,7 +52,6 @@ body {
   font-size: 1.125rem;
   color: #9698a6;
   font-weight: 300;
-  min-height: 300vh;
   overflow-x: hidden;
 }
 
@@ -907,6 +906,15 @@ template {
   text-align: center;
 }
 
+@media (min-width: 64em) {
+  .footer {
+    display: grid;
+    grid-template-columns: 30% auto auto auto;
+    grid-template-areas: "logo links-col1 links-col2 copyright";
+    font-size: 0.8rem;
+  }
+}
+
 .footer a {
   color: white;
   display: inline-block;
@@ -915,31 +923,77 @@ template {
 .footer-logo {
   display: inline-block;
   margin-bottom: 1.875rem;
+  justify-self: flex-start;
+  padding-left: 2rem;
+  grid-area: logo;
 }
 
 .footer-social {
   margin-bottom: 1.875rem;
+  justify-self: flex-start;
+  padding-left: 2rem;
+  grid-area: logo;
 }
 
 .footer-social a:not(:last-child) {
   margin-right: 1rem;
 }
 
+@media (min-width: 64em) {
+  .footer-social {
+    margin-top: 3.8rem;
+  }
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .footer-links a {
   line-height: 2.25;
 }
 
+.footer-links.col1 {
+  grid-area: links-col1;
+}
+
 .footer-links.col2 {
   margin-bottom: 1.875rem;
+  grid-area: links-col2;
+}
+
+@media (min-width: 64em) {
+  .footer-links {
+    align-items: flex-start;
+  }
 }
 
 .footer-cta a.button {
   margin-bottom: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .footer-cta a.button {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer-cta {
+    text-align: right;
+    padding-right: 3.5rem;
+  }
+}
+
+.footer-copyright {
+  grid-area: copyright;
+}
+
+@media (min-width: 64em) {
+  .footer-copyright {
+    color: #9698a6;
+    justify-self: flex-start;
+  }
 }
 /*# sourceMappingURL=style.css.map */
