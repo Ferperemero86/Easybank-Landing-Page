@@ -53,6 +53,7 @@ body {
   color: #9698a6;
   font-weight: 300;
   min-height: 300vh;
+  overflow-x: hidden;
 }
 
 @media (min-width: 64em) {
