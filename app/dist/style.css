@@ -901,17 +901,24 @@ template {
 
 .footer {
   background-color: #2d314d;
-  color: white;
-  padding: 2.5rem;
   text-align: center;
 }
 
+.footer-content {
+  color: white;
+  padding: 2.5rem;
+}
+
 @media (min-width: 64em) {
-  .footer {
+  .footer-content {
     display: grid;
-    grid-template-columns: 30% auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "logo links-col1 links-col2 copyright";
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    text-align: left;
   }
 }
 
@@ -922,16 +929,20 @@ template {
 
 .footer-logo {
   display: inline-block;
-  margin-bottom: 1.875rem;
   justify-self: flex-start;
-  padding-left: 2rem;
   grid-area: logo;
+}
+
+@media (max-width: 63.9375em) {
+  .footer-logo {
+    margin-bottom: 1.875rem;
+  }
 }
 
 .footer-social {
   margin-bottom: 1.875rem;
   justify-self: flex-start;
-  padding-left: 2rem;
+  align-self: flex-end;
   grid-area: logo;
 }
 
@@ -939,15 +950,16 @@ template {
   margin-right: 1rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .footer-social {
-    margin-top: 3.8rem;
+    margin-bottom: 0;
   }
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
+  justify-self: center;
 }
 
 .footer-links a {
@@ -959,30 +971,32 @@ template {
 }
 
 .footer-links.col2 {
-  margin-bottom: 1.875rem;
   grid-area: links-col2;
 }
 
-@media (min-width: 64em) {
-  .footer-links {
-    align-items: flex-start;
+@media (max-width: 63.9375em) {
+  .footer-links.col2 {
+    margin-bottom: 1.875rem;
   }
+}
+
+.footer-cta {
+  color: #9698a6;
 }
 
 .footer-cta a.button {
   margin-bottom: 1.875rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .footer-cta a.button {
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .footer-cta {
-    text-align: right;
-    padding-right: 3.5rem;
+    text-align: end;
   }
 }
 
@@ -990,10 +1004,9 @@ template {
   grid-area: copyright;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .footer-copyright {
-    color: #9698a6;
-    justify-self: flex-start;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
